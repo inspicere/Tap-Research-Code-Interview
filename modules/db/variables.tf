@@ -1,140 +1,76 @@
 variable "apply_immediately" {
   description = ""
-  type        = 
-}
-
-variable "ca_cert_identifier" {
-  description = ""
-  type        = 
 }
 
 variable "database_name" {
   description = ""
-  type        = 
 }
 
 variable "db_cluster_parameter_group_name" {
   description = ""
-  type        = 
 }
 
 variable "db_parameter_group_name" {
   description = ""
-  type        = 
 }
 
 variable "db_subnet_group_name" {
-  description = ""
-  type        = 
+  description = "A DB subnet group to associate with this DB instance."
 }
 
 variable "enabled_cloudwatch_logs_exports" {
-  description = ""
-  type        = 
+  description = "Enabled exports for cloudwatch"
+  default     = ["error", "general"]
 }
-
 variable "engine" {
   description = ""
-  type        = 
-}
-
-variable "engine_mode" {
-  description = ""
-  type        = 
 }
 
 variable "engine_version" {
   description = ""
-  type        = 
-}
-
-variable "global_cluster_identifier" {
-  description = ""
-  type        = 
-}
-
-variable "iam_roles" {
-  description = ""
-  type        = 
 }
 
 variable "instance_type" {
   description = ""
-  type        = 
 }
 
-variable "monitoring_interval" {
+variable "master_username" {
   description = ""
-  type        = 
+  type        = string
 }
 
-variable "name-${count.index" {
+variable "master_password" {
   description = ""
-  type        = 
+  type        = string
 }
 
 variable "name" {
   description = ""
-  type        = 
+  type        = string
 }
 
-variable "performance_insights_enabled" {
+variable "port" {
   description = ""
-  type        = 
-}
-
-variable "performance_insights_kms_key_id" {
-  description = ""
-  type        = 
+  type        = string
 }
 
 variable "publicly_accessible" {
   description = ""
-  type        = 
 }
 
 variable "replica_count" {
   description = ""
-  type        = 
-}
-
-variable "replica_scale_enabled" {
-  description = ""
-  type        = 
-}
-
-variable "replica_scale_min" {
-  description = ""
-  type        = 
-}
-
-variable "replication_source_identifier" {
-  description = ""
-  type        = 
-}
-
-variable "source_region" {
-  description = ""
-  type        = 
+  default     = 0
 }
 
 variable "subnets" {
-  description = ""
-  type        = 
+  description = "Aurora DB Subnet ID's"
+  type        = string
 }
 
 variable "tags" {
   description = ""
-  type        = 
 }
 
-variable "username" {
-  description = ""
-  type        = 
-}
 
-variable "vpc_security_group_ids" {
-  description = ""
-  type        = 
-}
 

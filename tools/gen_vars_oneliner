@@ -1,0 +1,1 @@
+grep -Po 'var\.[^ ]+' main.tf | sed -e 's/[}",)]//g' -e 's/var\./variable "/g' -e 's/$/" {#  description = ""#  type       =#}/g' | sort -u | tr '#' '\n' > variables.tf
