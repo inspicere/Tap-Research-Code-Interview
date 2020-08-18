@@ -31,6 +31,7 @@ module "db_tier" {
   aws_pub_subnet_1_cidr = "10.0.1.0/24"
   aws_app_subnet_1_cidr = "10.0.3.0/24"
   aws_db_subnet_1_cidr  = "10.0.4.0/24"
+  aws_db_subnet_2_cidr  = "10.0.7.0/24"
 }
 
 module "memcached_tier" {

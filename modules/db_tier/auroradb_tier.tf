@@ -8,6 +8,15 @@ resource "aws_subnet" "aurora_db_subnet_1" {
   }
 }
 
+resource "aws_subnet" "aurora_db_subnet_2" {
+  vpc_id = var.vpc_id
+  cidr_block = var.aws_db_subnet_2_cidr
+  tags = {
+    Name = "DB subnet 2"
+    Subnet = "DB"
+  }
+}
+
 ### SECURITY GROUP
 resource "aws_security_group" "auroradb_sg" {
   name = "db-sg"
@@ -26,9 +35,9 @@ resource "aws_security_group" "auroradb_sg" {
 
   # Egress to internal
   egress {
-    from_port = 0
-    to_port = 0
-    protocol = "-1"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
     cidr_blocks = ["10.0.0.0/16"]
   }
 }

@@ -7,6 +7,11 @@ resource "aws_db_subnet_group" "this" {
   })
 }
 
+resource "aws_db_parameter_group" "default" {
+  name   = var.db_parameter_group_name
+  family = "mysql5.7"
+}
+
 resource "aws_rds_cluster" "this" {
   cluster_identifier                  = var.name
   engine                              = var.engine

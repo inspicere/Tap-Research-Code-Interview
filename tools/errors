@@ -1,0 +1,24 @@
+Error: Error creating DB Parameter Group: InvalidParameterValue: ParameterGroupFamily aurora-mysql is not a valid parameter group family
+	status code: 400, request id: 8daf48d5-7750-462a-ae87-e83edb916069
+
+
+
+Error: Error creating DB Cluster Parameter Group: InvalidParameterValue: ParameterGroupFamily aurora-mysql is not a valid parameter group family
+	status code: 400, request id: e97dfd3b-25bf-4980-a7a1-39b919746a6d
+
+
+
+Error: Error creating application Load Balancer: InvalidSubnet: The subnet ID '10.0.2.0/24' is not valid
+	status code: 400, request id: a513d176-9a0f-4f4d-aa4b-5242d858f682
+
+
+
+Error: Error creating DB Subnet Group: DBSubnetGroupDoesNotCoverEnoughAZs: DB Subnet Group doesn't meet availability zone coverage requirement. Please add subnets to cover at least 2 availability zones. Current coverage: 1
+	status code: 400, request id: 325fafc0-27fd-447c-acf1-178b2c083f05
+
+
+
+Error: Error creating Elasticache Replication Group: CacheParameterGroupNotFound: CacheParameterGroup not found: default.redis3.2.cluster.on
+	status code: 404, request id: 4f1aafb5-429d-4965-a22f-32738ffd50ad
+
+

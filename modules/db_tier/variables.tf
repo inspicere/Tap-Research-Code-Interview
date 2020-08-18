@@ -8,6 +8,11 @@ variable "aws_db_subnet_1_cidr" {
   type        = string
 }
 
+variable "aws_db_subnet_2_cidr" {
+  description = "AuroraDB Subnet"
+  type        = string
+}
+
 variable "aws_network_cidr" {
   description = "VPC CIDR Range"
   type        = string
