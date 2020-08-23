@@ -65,7 +65,6 @@ variable "replica_count" {
 
 variable "subnets" {
   description = "Aurora DB Subnet ID's"
-  type        = string
 }
 
 variable "tags" {

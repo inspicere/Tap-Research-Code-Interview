@@ -6,7 +6,7 @@ module "aurora" {
   name                                = "auroradb-cluster"
   engine                              = "aurora-mysql"
   engine_version                      = "5.7.12"
-  subnets                             = module.db_tier.db_subnet_id
+  subnets                             = module.db_tier.db_subnet_ids
   replica_count                       = 3
   instance_type                       = "db.t2.micro"
   apply_immediately                   = true
@@ -16,7 +16,7 @@ module "aurora" {
   database_name                       = "my-little-database"
   master_username                     = "user"
   master_password                     = "password"
-  db_subnet_group_name                = "db-subnet-group"
+  db_subnet_group_name                = module.db_tier.db_subnet_group_name
   publicly_accessible                 = "false"
   port                                = "3306"
   tags = {

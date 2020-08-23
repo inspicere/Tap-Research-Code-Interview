@@ -1,3 +1,4 @@
+/*
 resource "aws_db_subnet_group" "this" {
   name        = var.db_subnet_group_name
   description = "Aurora cluster subnet group"
@@ -6,7 +7,7 @@ resource "aws_db_subnet_group" "this" {
     Name = var.db_subnet_group_name
   })
 }
-
+*/
 resource "aws_db_parameter_group" "default" {
   name   = var.db_parameter_group_name
   family = "mysql5.7"
