@@ -27,12 +27,12 @@ module "aurora" {
 
 resource "aws_db_parameter_group" "aurora_db_pg" {
   name        = "aurora-db-parameter-group"
-  family      = "aurora-mysql"
+  family      = "aurora-mysql5.7"
   description = "aurora-db-parameter-group"
 }
 
 resource "aws_rds_cluster_parameter_group" "aurora_cluster_pg" {
   name        = "aurora-cluster-parameter-group"
-  family      = "aurora-mysql"
+  family      = "aurora-mysql5.7"
   description = "aurora-cluster-parameter-group"
 }
