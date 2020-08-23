@@ -9,7 +9,7 @@ module "redis" {
   engine_version          = "3.2.10"
   node_type               = "cache.t2.micro"
   num_cache_nodes         = 3
-  parameter_group_name    = "default.redis5.0"
+  parameter_group_name    = "default.redis5.0.cluster.on"
   port                    = 6379
   apply_immediately       = true
   aws_redis_subnet_1_cidr = "10.0.6.0"

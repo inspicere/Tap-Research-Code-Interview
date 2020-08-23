@@ -48,7 +48,7 @@ variable "node_type" {
 }
 variable "parameter_group_name" {
   description = "Number of nodes groups to create in the cluster"
-  default     = "default.redis3.2.cluster.on"
+  default     = "default.redis5.0.cluster.on"
 }
 
 variable "redis_subnet_id" {

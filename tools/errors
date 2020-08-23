@@ -1,9 +1,19 @@
-# todo
+#Corrected variable pass through in modules/redis
+Error: Error creating Elasticache Replication Group: InvalidParameterCombination: Expected a parameter group of family redis5.0 but found one of family redis3.2
+	status code: 400, request id: 06885e7c-9ba1-4258-92b7-6aa29bcc71fe
+
+
+# Removed dashes from db name in auroradb.tf
+Error: error creating RDS cluster: InvalidParameterValue: DatabaseName must begin with a letter and contain only alphanumeric characters.
+	status code: 400, request id: c5c10fc0-b650-466d-befe-e864346c6823
+
+
+
 Error: Error creating application Load Balancer: InvalidSubnet: The subnet ID '10.0.2.0/24' is not valid
-	status code: 400, request id: a513d176-9a0f-4f4d-aa4b-5242d858f682
+	status code: 400, request id: c321b658-2266-493f-bb1b-f7551e228e6c
 
 
-
-Error: Error creating DB Subnet Group: DBSubnetGroupDoesNotCoverEnoughAZs: DB Subnet Group doesn't meet availability zone coverage requirement. Please add subnets to cover at least 2 availability zones. Current coverage: 1
-	status code: 400, request id: 325fafc0-27fd-447c-acf1-178b2c083f05
+# Removed duplicate PG creation from aurora.tf as it's already handled first at root/auroradb.tf 
+Error: Error creating DB Parameter Group: DBParameterGroupAlreadyExists: Parameter group aurora-db-parameter-group already exists
+	status code: 400, request id: 162eb3da-7410-4473-8e73-76a0315ee668
 

@@ -1,18 +1,18 @@
 #### DB subnets
 resource "aws_subnet" "db_subnet_1" {
-  vpc_id = var.vpc_id
+  vpc_id     = var.vpc_id
   cidr_block = var.aws_db_subnet_1_cidr
   tags = {
-    Name = "DB subnet 1"
+    Name   = "DB subnet 1"
     Subnet = "DB"
   }
 }
 
 resource "aws_subnet" "db_subnet_2" {
-  vpc_id = var.vpc_id
+  vpc_id     = var.vpc_id
   cidr_block = var.aws_db_subnet_2_cidr
   tags = {
-    Name = "DB subnet 2"
+    Name   = "DB subnet 2"
     Subnet = "DB"
   }
 }
@@ -27,7 +27,7 @@ resource "aws_db_subnet_group" "aurora_db_subnet_group" {
 
 ### SECURITY GROUP
 resource "aws_security_group" "auroradb_sg" {
-  name = "db-sg"
+  name   = "db-sg"
   vpc_id = var.vpc_id
 
   # TCP access only from app subnet and bastion host

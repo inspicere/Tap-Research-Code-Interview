@@ -8,10 +8,6 @@ resource "aws_db_subnet_group" "this" {
   })
 }
 */
-resource "aws_db_parameter_group" "default" {
-  name   = var.db_parameter_group_name
-  family = "mysql5.7"
-}
 
 resource "aws_rds_cluster" "this" {
   cluster_identifier                  = var.name
@@ -28,7 +24,7 @@ resource "aws_rds_cluster" "this" {
 }
 
 resource "aws_rds_cluster_instance" "this" {
-  count = var.replica_count
+  count                           = var.replica_count
   cluster_identifier              = aws_rds_cluster.this.id
   engine                          = var.engine
   engine_version                  = var.engine_version

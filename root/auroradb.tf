@@ -13,7 +13,7 @@ module "aurora" {
   db_parameter_group_name             = aws_db_parameter_group.aurora_db_pg.id
   db_cluster_parameter_group_name     = aws_rds_cluster_parameter_group.aurora_cluster_pg.id
   enabled_cloudwatch_logs_exports     = ["audit", "error", "general", "slowquery"]
-  database_name                       = "my-little-database"
+  database_name                       = "mylittledatabase"
   master_username                     = "user"
   master_password                     = "password"
   db_subnet_group_name                = module.db_tier.db_subnet_group_name
