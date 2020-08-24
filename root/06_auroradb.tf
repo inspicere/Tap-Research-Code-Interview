@@ -19,6 +19,7 @@ module "aurora" {
   db_subnet_group_name                = module.db_tier.db_subnet_group_name
   publicly_accessible                 = "false"
   port                                = "3306"
+  skip_final_snapshot                 = "truu"
   tags = {
     Env = "Dev"
     Location = "/dev/urandom"

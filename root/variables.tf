@@ -14,6 +14,12 @@ variable "aws_db_subnet_1_cidr" {
   default     = "10.0.4.0/24"
 }
 
+variable "aws_db_subnet_2_cidr" {
+  description = "AuroraDB Subnet"
+  type        = string
+  default     = "10.0.7.0/24"
+}
+
 variable "aws_memcached_subnet_1_cidr" {
   description = "Load Balancer Subnet"
   type        = string
@@ -39,7 +45,7 @@ variable "aws_pub_subnet_2_cidr" {
 }
 
 variable "aws_redis_subnet_1_cidr" {
-  description = "Load Balancer Subnet"
+  description = "Redis Subnet"
   type        = string
   default     = "10.0.6.0/24"
 }
