@@ -20,6 +20,7 @@ resource "aws_rds_cluster" "this" {
   db_subnet_group_name                = var.db_subnet_group_name
   apply_immediately                   = var.apply_immediately
   db_cluster_parameter_group_name     = var.db_cluster_parameter_group_name
+  skip_final_snapshot                 = var.skip_final_snapshot
   tags = var.tags
 }
 

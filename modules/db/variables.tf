@@ -55,12 +55,16 @@ variable "port" {
 }
 
 variable "publicly_accessible" {
-  description = ""
+  description = "Bool to control if instance is publicly accessible. Defaults to FALSE"
 }
 
 variable "replica_count" {
-  description = ""
+  description = "Number of instances to create and attach to the aurora db cluster instance"
   default     = 0
+}
+
+variable "skip_final_snapshot" {
+  description = "Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created."
 }
 
 variable "subnets" {
